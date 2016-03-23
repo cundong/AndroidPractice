@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cundong.practice.touch.MyViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.cundong.practice.touch.MyButton
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:text="Button" />
+
+    <com.cundong.practice.touch.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:gravity="center"
+        android:text="TextViewTextViewTextViewTextViewTextView" />
+
+</com.cundong.practice.touch.MyViewGroup>
