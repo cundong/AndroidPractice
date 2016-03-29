@@ -4,17 +4,10 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/touch_btn"
+        android:id="@+id/call_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:text="touch" />
-
-    <Button
-        android:id="@+id/binder_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/touch_btn"
-        android:text="binder" />
+        android:text="call Server" />
 
 </RelativeLayout>

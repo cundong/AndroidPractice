@@ -1,17 +1,20 @@
 package com.cundong.practice;
 
 import android.content.Intent;
+import android.os.Binder;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 import com.cundong.practice.R;
+import com.cundong.practice.binder.BinderActivity;
 import com.cundong.practice.touch.TouchActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mTouchBtn;
+    private Button mTouchBtn, mBinderBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity( new Intent(MainActivity.this, TouchActivity.class));
+                finish();
+            }
+        });
+
+        mBinderBtn = (Button) findViewById(R.id.binder_btn);
+        mBinderBtn.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent(MainActivity.this, BinderActivity.class));
                 finish();
             }
         });
