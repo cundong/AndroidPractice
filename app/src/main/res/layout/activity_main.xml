@@ -17,4 +17,18 @@
         android:layout_below="@id/touch_btn"
         android:text="binder" />
 
+    <Button
+        android:id="@+id/storage_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/binder_btn"
+        android:text="存储普通缓存" />
+
+    <Button
+        android:id="@+id/storage_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/storage_btn1"
+        android:text="存储照片/媒体内容/文件" />
+
 </RelativeLayout>
