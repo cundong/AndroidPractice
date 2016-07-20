@@ -31,4 +31,11 @@
         android:layout_below="@id/storage_btn1"
         android:text="存储照片/媒体内容/文件" />
 
+    <Button
+        android:id="@+id/hook_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/storage_btn2"
+        android:text="hook" />
+
 </RelativeLayout>
