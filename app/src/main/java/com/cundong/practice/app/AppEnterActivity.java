@@ -79,8 +79,6 @@ public class AppEnterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(AppEnterActivity.this, TestHookActivity.class);
-                Bundle bundle = new Bundle();
-                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });

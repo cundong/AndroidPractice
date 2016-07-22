@@ -42,6 +42,17 @@ public class HookInstrumentation extends Instrumentation {
             Context who, IBinder contextThread, IBinder token, Activity target,
             Intent intent, int requestCode, Bundle options) {
 
+        // 此处，动态修改了目标Activity
+        Class reallyTarget = (Class) intent.getSerializableExtra("reallyTarget");
+
+        if (reallyTarget != null) {
+            intent.setClass(who, reallyTarget);
+
+            if (options != null) {
+                intent.putExtras(options);
+            }
+        }
+
         StringBuilder sb = new StringBuilder();
         sb.append("who:").append(who)
                 .append(",contextThread:").append(contextThread)

@@ -1,16 +1,17 @@
 package com.cundong.practice.hook;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.cundong.practice.R;
+import com.cundong.practice.touch.TouchActivity;
 
 /**
  * Created by liucundong on 2016/7/20.
+ *
  */
 public class TestHookActivity extends AppCompatActivity {
 
@@ -25,11 +26,14 @@ public class TestHookActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Class clazz = TouchActivity.class;
+
                 Intent intent = new Intent();
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://www.baidu.com"));
-                getApplicationContext().startActivity(intent);
+                intent.putExtra("reallyTarget", clazz);
+                intent.setClass(TestHookActivity.this, PlaceHolderActivity.class);
+//                getApplicationContext().startActivity(intent);
+                startActivity(intent);
+
             }
         });
     }

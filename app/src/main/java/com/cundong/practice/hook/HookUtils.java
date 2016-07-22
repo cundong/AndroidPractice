@@ -12,7 +12,6 @@ import java.lang.reflect.Method;
 public class HookUtils {
 
     //http://www.cnblogs.com/ZhangXiangQian/p/5386029.html
-
     /**
      * hook掉ActivityThread的mInstrumentation属性
      * ContextImpl中startActivity()是直接调用mMainThread.getInstrumentation().execStartActivity，所以Hook它即可

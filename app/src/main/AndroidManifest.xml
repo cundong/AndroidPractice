@@ -40,6 +40,12 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".hook.PlaceHolderActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
         <service
             android:name=".binder.CoreService"
             android:exported="true"
